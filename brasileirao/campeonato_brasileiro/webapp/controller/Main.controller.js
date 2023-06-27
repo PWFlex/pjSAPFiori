@@ -15,7 +15,7 @@ sap.ui.define([
                 // Criação das variáveis 
                 var dadosGerais = {
                     rodada : '10aaa',
-                    campeonato: "Brasileirãooooo 2023 do Canal Fiorinet"
+                    campeonato: "Brasileirãoo 2023 do Canal Fiorinet"
                 };
 
                 // Criação do Modelo

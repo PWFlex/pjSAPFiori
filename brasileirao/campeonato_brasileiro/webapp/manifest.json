@@ -57,6 +57,10 @@
         "settings": {
           "bundleName": "campeonatobrasileiro.i18n.i18n"
         }
+      },
+      "PartidasModel" :{
+        "type":"sap.ui.model.json.JSONModel",
+        "uri":"model/partidas.json"
       }
     },
     "resources": {

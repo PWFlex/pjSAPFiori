@@ -1,0 +1,42 @@
+     <!-- tabela -->
+     <Table >
+        <!-- colunas -->
+        <columns>
+            <!-- Posição -->
+            <Column >
+                <Text text="9ª Rodada"></Text>
+            </Column>
+
+            <!-- Escudo -->
+            <Column >
+                <Text text=""></Text>
+            </Column>
+
+            <!-- Time -->
+            <Column >
+                <Text text=""></Text>
+            </Column>
+
+            <!-- Pontos -->
+            <Column >
+                <Text text=""></Text>
+            </Column>
+        </columns>
+
+
+        <items>
+            <!-- ColumnListItem - Gerados de linhas na tabela -->
+            <ColumnListItem >   <!-- Linha da Coluna -->
+                <cells>
+                    <!-- 1ª Coluna Posição -->
+                    <Text text=""></Text>                                        
+                    <!-- 2ª Coluna Escudo-->
+                    <Image width="25%" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Botafogo_de_Futebol_e_Regatas_logo.svg/1816px-Botafogo_de_Futebol_e_Regatas_logo.svg.png"></Image>                                        
+                    <!-- 3ª Coluna Time-->
+                    <Text text="Placar"></Text>                                        
+                    <!-- 4ª Coluna Pontos-->
+                    <Image width="25%" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Botafogo_de_Futebol_e_Regatas_logo.svg/1816px-Botafogo_de_Futebol_e_Regatas_logo.svg.png"></Image>                                        
+                </cells>
+            </ColumnListItem>
+        </items>
+        </Table>

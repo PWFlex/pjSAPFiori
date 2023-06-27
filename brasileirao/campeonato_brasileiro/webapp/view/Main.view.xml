@@ -1,5 +1,7 @@
-<mvc:View controllerName="campeonatobrasileiro.controller.Main"
-    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+<mvc:View xmlns:table="sap.ui.table"
+controllerName="campeonatobrasileiro.controller.Main"
+    xmlns:c="sap.ui.core"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"  
     xmlns="sap.m">
     <Page id="page" title="{i18n>title}">
                     <!-- Cabeçaclho -->      
@@ -10,12 +12,10 @@
             ></ObjectHeader>   
             <IconTabBar>  <!-- Barra de Abas com Ícones -->
                 <items>
-                        
                     <IconTabFilter  
                         text="Classificação" 
                         icon="sap-icon://competitor"
                         key="classificacao">
-                        
                         <!-- tabela -->
                         <Table >
                             <!-- colunas -->
@@ -111,7 +111,7 @@
                                         <!-- 1ª Coluna Posição -->
                                         <Text text="2"></Text>                                        
                                         <!-- 2ª Coluna Escudo-->
-                                        <Image width="45%" src=""></Image>                                        
+                                        <Image width="45%" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Palmeiras_logo.svg/1024px-Palmeiras_logo.svg.png"></Image>                                        
                                         <!-- 3ª Coluna Time-->
                                         <Text text="Palmeiras"></Text>                                        
                                         <!-- 4ª Coluna Pontos-->
@@ -138,7 +138,7 @@
                                         <!-- 1ª Coluna Posição -->
                                         <Text text="3"></Text>                                        
                                         <!-- 2ª Coluna Escudo-->
-                                        <Image width="45%" src=""></Image>                                        
+                                        <Image width="45%" src="https://s.sde.globo.com/media/organizations/2018/03/10/atletico-mg.svg"></Image>                                        
                                         <!-- 3ª Coluna Time-->
                                         <Text text="Atlético-MG"></Text>                                        
                                         <!-- 4ª Coluna Pontos-->
@@ -165,7 +165,7 @@
                                         <!-- 1ª Coluna Posição -->
                                         <Text text="4"></Text>                                        
                                         <!-- 2ª Coluna Escudo-->
-                                        <Image width="45%" src=""></Image>                                        
+                                        <Image width="45%" src="https://upload.wikimedia.org/wikipedia/commons/7/7b/Gremio_logo.gif"></Image>                                        
                                         <!-- 3ª Coluna Time-->
                                         <Text text="Grêmio"></Text>                                        
                                         <!-- 4ª Coluna Pontos-->
@@ -192,7 +192,7 @@
                                         <!-- 1ª Coluna Posição -->
                                         <Text text="5"></Text>                                        
                                         <!-- 2ª Coluna Escudo-->
-                                        <Image width="45%" src=""></Image>                                        
+                                        <Image width="45%" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Flamengo_braz_logo.svg/1200px-Flamengo_braz_logo.svg.png"></Image>                                        
                                         <!-- 3ª Coluna Time-->
                                         <Text text="Flamengo"></Text>                                        
                                         <!-- 4ª Coluna Pontos-->
@@ -219,7 +219,7 @@
                                         <!-- 1ª Coluna Posição -->
                                         <Text text="6"></Text>                                        
                                         <!-- 2ª Coluna Escudo-->
-                                        <Image width="45%" src=""></Image>                                        
+                                        <Image width="45%" src="https://upload.wikimedia.org/wikipedia/pt/thumb/a/a3/FFC_escudo.svg/1200px-FFC_escudo.svg.png"></Image>                                        
                                         <!-- 3ª Coluna Time-->
                                         <Text text="Fluminense"></Text>                                        
                                         <!-- 4ª Coluna Pontos-->
@@ -246,9 +246,9 @@
                                         <!-- 1ª Coluna Posição -->
                                         <Text text="7"></Text>                                        
                                         <!-- 2ª Coluna Escudo-->
-                                        <Image width="45%" src=""></Image>                                        
+                                        <Image width="45%" src="https://upload.wikimedia.org/wikipedia/pt/1/10/Escudo_do_Athletico-PR.png"></Image>                                        
                                         <!-- 3ª Coluna Time-->
-                                        <Text text="Atlético-PR xxxxx"></Text>                                        
+                                        <Text text="Atlético-PR"></Text>                                        
                                         <!-- 4ª Coluna Pontos-->
                                         <Text text="21"></Text>                                        
                                         <!-- 5ª Coluna Jogos-->
@@ -273,9 +273,9 @@
                                         <!-- 1ª Coluna Posição -->
                                         <Text text="8"></Text>                                        
                                         <!-- 2ª Coluna Escudo-->
-                                        <Image width="45%" src=""></Image>                                        
+                                        <Image width="45%" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Brasao_do_Sao_Paulo_Futebol_Clube.svg/2054px-Brasao_do_Sao_Paulo_Futebol_Clube.svg.png"></Image>                                        
                                         <!-- 3ª Coluna Time-->
-                                        <Text text="São Paulooooo"></Text>                                        
+                                        <Text text="São Paulo"></Text>                                        
                                         <!-- 4ª Coluna Pontos-->
                                         <Text text="21"></Text>                                        
                                         <!-- 5ª Coluna Jogos-->
@@ -300,9 +300,9 @@
                                         <!-- 1ª Coluna Posição -->
                                         <Text text="9"></Text>                                        
                                         <!-- 2ª Coluna Escudo-->
-                                        <Image width="45%" src=""></Image>                                        
+                                        <Image width="45%" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/FortalezaEsporteClube.svg/1200px-FortalezaEsporteClube.svg.png"></Image>                                        
                                         <!-- 3ª Coluna Time-->
-                                        <Text text="Fortalezaaaa"></Text>                                        
+                                        <Text text="Fortaleza"></Text>                                        
                                         <!-- 4ª Coluna Pontos-->
                                         <Text text="21"></Text>                                        
                                         <!-- 5ª Coluna Jogos-->
@@ -327,9 +327,9 @@
                                         <!-- 1ª Coluna Posição -->
                                         <Text text="10"></Text>                                        
                                         <!-- 2ª Coluna Escudo-->
-                                        <Image width="45%" src=""></Image>                                        
+                                        <Image width="45%" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Cruzeiro_Esporte_Clube_%28logo%29.svg/1200px-Cruzeiro_Esporte_Clube_%28logo%29.svg.png"></Image>                                        
                                         <!-- 3ª Coluna Time-->
-                                        <Text text="Cruzeiroaaaaa"></Text>                                        
+                                        <Text text="Cruzeiro"></Text>                                        
                                         <!-- 4ª Coluna Pontos-->
                                         <Text text="21"></Text>                                        
                                         <!-- 5ª Coluna Jogos-->
@@ -354,9 +354,9 @@
                                         <!-- 1ª Coluna Posição -->
                                         <Text text="11"></Text>                                        
                                         <!-- 2ª Coluna Escudo-->
-                                        <Image width="45%" src=""></Image>                                        
+                                        <Image width="45%" src="https://upload.wikimedia.org/wikipedia/pt/9/9e/RedBullBragantino.png"></Image>                                        
                                         <!-- 3ª Coluna Time-->
-                                        <Text text="Bragan"></Text>                                        
+                                        <Text text="Bragantino"></Text>                                        
                                         <!-- 4ª Coluna Pontos-->
                                         <Text text="21"></Text>                                        
                                         <!-- 5ª Coluna Jogos-->
@@ -381,9 +381,9 @@
                                         <!-- 1ª Coluna Posição -->
                                         <Text text="12"></Text>                                        
                                         <!-- 2ª Coluna Escudo-->
-                                        <Image width="45%" src=""></Image>                                        
+                                        <Image width="45%" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Santos_logo.svg/1200px-Santos_logo.svg.png"></Image>                                        
                                         <!-- 3ª Coluna Time-->
-                                        <Text text="Santossssss"></Text>                                        
+                                        <Text text="Santos"></Text>                                        
                                         <!-- 4ª Coluna Pontos-->
                                         <Text text="21"></Text>                                        
                                         <!-- 5ª Coluna Jogos-->
@@ -408,9 +408,9 @@
                                         <!-- 1ª Coluna Posição -->
                                         <Text text="13"></Text>                                        
                                         <!-- 2ª Coluna Escudo-->
-                                        <Image width="45%" src=""></Image>                                        
+                                        <Image width="45%" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Escudo_do_Sport_Club_Internacional.svg/1200px-Escudo_do_Sport_Club_Internacional.svg.png"></Image>                                        
                                         <!-- 3ª Coluna Time-->
-                                        <Text text="Interaaaaaa"></Text>                                        
+                                        <Text text="Inter"></Text>                                        
                                         <!-- 4ª Coluna Pontos-->
                                         <Text text="21"></Text>                                        
                                         <!-- 5ª Coluna Jogos-->
@@ -435,9 +435,9 @@
                                         <!-- 1ª Coluna Posição -->
                                         <Text text="14"></Text>                                        
                                         <!-- 2ª Coluna Escudo-->
-                                        <Image width="45%" src=""></Image>                                        
+                                        <Image width="45%" src="https://upload.wikimedia.org/wikipedia/pt/2/20/Cuiab%C3%A1EC2020.png"></Image>                                        
                                         <!-- 3ª Coluna Time-->
-                                        <Text text="Cuiabano"></Text>                                        
+                                        <Text text="Cuiaba"></Text>                                        
                                         <!-- 4ª Coluna Pontos-->
                                         <Text text="21"></Text>                                        
                                         <!-- 5ª Coluna Jogos-->
@@ -462,9 +462,9 @@
                                         <!-- 1ª Coluna Posição -->
                                         <Text text="15"></Text>                                        
                                         <!-- 2ª Coluna Escudo-->
-                                        <Image width="45%" src=""></Image>                                        
+                                        <Image width="45%" src="https://upload.wikimedia.org/wikipedia/pt/9/90/ECBahia.png"></Image>                                        
                                         <!-- 3ª Coluna Time-->
-                                        <Text text="Bahiaaaaaaa"></Text>                                        
+                                        <Text text="Bahia"></Text>                                        
                                         <!-- 4ª Coluna Pontos-->
                                         <Text text="21"></Text>                                        
                                         <!-- 5ª Coluna Jogos-->
@@ -489,9 +489,9 @@
                                         <!-- 1ª Coluna Posição -->
                                         <Text text="16"></Text>                                        
                                         <!-- 2ª Coluna Escudo-->
-                                        <Image width="45%" src=""></Image>                                        
+                                        <Image width="45%" src="https://upload.wikimedia.org/wikipedia/pt/b/b4/Corinthians_simbolo.png"></Image>                                        
                                         <!-- 3ª Coluna Time-->
-                                        <Text text="Save Corinthians"></Text>                                        
+                                        <Text text="Corinthians"></Text>                                        
                                         <!-- 4ª Coluna Pontos-->
                                         <Text text="21"></Text>                                        
                                         <!-- 5ª Coluna Jogos-->
@@ -516,9 +516,9 @@
                                         <!-- 1ª Coluna Posição -->
                                         <Text text="17"></Text>                                        
                                         <!-- 2ª Coluna Escudo-->
-                                        <Image width="45%" src=""></Image>                                        
+                                        <Image width="45%" src="https://upload.wikimedia.org/wikipedia/commons/f/ff/Goi%C3%A1sLogo21.png"></Image>                                        
                                         <!-- 3ª Coluna Time-->
-                                        <Text text="Goiaisss"></Text>                                        
+                                        <Text text="Goiás"></Text>                                        
                                         <!-- 4ª Coluna Pontos-->
                                         <Text text="21"></Text>                                        
                                         <!-- 5ª Coluna Jogos-->
@@ -543,9 +543,9 @@
                                         <!-- 1ª Coluna Posição -->
                                         <Text text="18"></Text>                                        
                                         <!-- 2ª Coluna Escudo-->
-                                        <Image width="45%" src=""></Image>                                        
+                                        <Image width="45%" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Escudo_do_America_Futebol_Clube.svg/1200px-Escudo_do_America_Futebol_Clube.svg.png"></Image>                                        
                                         <!-- 3ª Coluna Time-->
-                                        <Text text="America de Minas"></Text>                                        
+                                        <Text text="America MG"></Text>                                        
                                         <!-- 4ª Coluna Pontos-->
                                         <Text text="21"></Text>                                        
                                         <!-- 5ª Coluna Jogos-->
@@ -570,7 +570,7 @@
                                         <!-- 1ª Coluna Posição -->
                                         <Text text="19"></Text>                                        
                                         <!-- 2ª Coluna Escudo-->
-                                        <Image width="45%" src=""></Image>                                        
+                                        <Image width="45%" src="https://upload.wikimedia.org/wikipedia/pt/a/ac/CRVascodaGama.png"></Image>                                        
                                         <!-- 3ª Coluna Time-->
                                         <Text text="Vasco da Gama"></Text>                                        
                                         <!-- 4ª Coluna Pontos-->
@@ -597,9 +597,9 @@
                                         <!-- 1ª Coluna Posição -->
                                         <Text text="20"></Text>                                        
                                         <!-- 2ª Coluna Escudo-->
-                                        <Image width="45%" src=""></Image>                                        
+                                        <Image width="45%" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Coritiba_FBC_%282011%29_-_PR.svg/1200px-Coritiba_FBC_%282011%29_-_PR.svg.png"></Image>                                        
                                         <!-- 3ª Coluna Time-->
-                                        <Text text="Coxa"></Text>                                        
+                                        <Text text="Coritiba"></Text>                                        
                                         <!-- 4ª Coluna Pontos-->
                                         <Text text="21"></Text>                                        
                                         <!-- 5ª Coluna Jogos-->
@@ -624,52 +624,11 @@
                     <IconTabFilter  
                         text="Pratidas" 
                         icon="sap-icon://soccer"
-                        key="partidas">                        
+                        key="partidas">          
+                        <!-- Par funcionar com Fragment em outro arquivo-->
+                      <c:Fragment fragmentName="campeonatobrasileiro.view.partidas" type="XML" />
                     </IconTabFilter>
                 </items>
-            </IconTabBar>   
-
-                <!-- tabela -->
-                <Table >
-                    <!-- colunas -->
-                    <columns>
-                        <!-- Posição -->
-                        <Column >
-                            <Text text="9ª Rodada"></Text>
-                        </Column>
-
-                        <!-- Escudo -->
-                        <Column >
-                            <Text text=""></Text>
-                        </Column>
-
-                        <!-- Time -->
-                        <Column >
-                            <Text text=""></Text>
-                        </Column>
-
-                        <!-- Pontos -->
-                        <Column >
-                            <Text text=""></Text>
-                        </Column>
-                    </columns>
-
-
-                    <items>
-                        <!-- ColumnListItem - Gerados de linhas na tabela -->
-                        <ColumnListItem >   <!-- Linha da Coluna -->
-                            <cells>
-                                <!-- 1ª Coluna Posição -->
-                                <Text text=""></Text>                                        
-                                <!-- 2ª Coluna Escudo-->
-                                <Image width="25%" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Botafogo_de_Futebol_e_Regatas_logo.svg/1816px-Botafogo_de_Futebol_e_Regatas_logo.svg.png"></Image>                                        
-                                <!-- 3ª Coluna Time-->
-                                <Text text="Placar"></Text>                                        
-                                <!-- 4ª Coluna Pontos-->
-                                <Image width="25%" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Botafogo_de_Futebol_e_Regatas_logo.svg/1816px-Botafogo_de_Futebol_e_Regatas_logo.svg.png"></Image>                                        
-                            </cells>
-                        </ColumnListItem>
-                    </items>
-                    </Table>
+            </IconTabBar>              
     </Page>
 </mvc:View>
