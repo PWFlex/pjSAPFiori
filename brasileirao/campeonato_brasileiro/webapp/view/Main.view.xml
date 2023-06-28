@@ -6,8 +6,8 @@ controllerName="campeonatobrasileiro.controller.Main"
     <Page id="page" title="{i18n>title}">
                     <!-- Cabeçaclho -->      
             <ObjectHeader 
-                title="{ModeloDadosGerais>/campeonato}"
-                number="{ModeloDadosGerais>/rodada}"
+                title="{ModeloDadosGerais>/nome_popular}"
+                number="{ModeloDadosGerais>/rodada_atual_rodada}"
                 numberUnit="Rodada"
             ></ObjectHeader>   
             <IconTabBar>  <!-- Barra de Abas com Ícones -->

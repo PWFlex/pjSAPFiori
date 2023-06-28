@@ -46,10 +46,12 @@ sap.ui.define([
             // novo método
             buscarDadosGerais: function(){
                 //obter model para atualizar
-                var dadosModel2 = this.getView().getModel("ModeloDadosGerais");
+                //var dadosModel2 = this.getView().getModel("ModeloDadosGerais");
+                var classificacaoModel2 = this.getView().getModel("ModeloClassificacao");
 
                 const configuracoes = {
-                    url : "https://api-apifutebol.com.br/v1/campeonatos/10",
+                    url : "https://api.api-futebol.com.br/v1/campeonatos/10",
+                    //url : "https://api.3tentos.com.br/hml/mvteste/v1/prod",
                     method : "GET",
                     async : true,
                     crossDomain : true,
@@ -66,6 +68,7 @@ sap.ui.define([
                 .done(function(resposta){
                     console.log(resposta);
                     debugger
+                    classificacaoModel2.setData({"Classificacao" : resposta});
 
                 })
                 
