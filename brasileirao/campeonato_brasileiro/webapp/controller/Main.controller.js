@@ -25,7 +25,6 @@ sap.ui.define([
                 var view = this.getView();
                 view.setModel(dadosModel, "ModeloDadosGerais");
             */
-
             //Objetos vazios
             var dadosGerais = {};
             var classificacao = {};
@@ -40,47 +39,99 @@ sap.ui.define([
             this.getView().setModel(dadosModel, "ModeloDadosGerais");
             this.getView().setModel(classificacaoModel, "ModeloClassificacao");
             this.getView().setModel(partidasModel, "ModeloPartidas");
-
             },
 
             // novo método
             buscarDadosGerais: function(){
                 //obter model para atualizar
-                //var dadosModel2 = this.getView().getModel("ModeloDadosGerais");
-                var classificacaoModel2 = this.getView().getModel("ModeloClassificacao");
-
+                var dadosModel2 = this.getView().getModel("ModeloDadosGerais");
+                             
                 const configuracoes = {
-                    url : "https://api.api-futebol.com.br/v1/campeonatos/10",
+                  //  url : "https://api.api-futebol.com.br/v1/campeonatos/10",
                     //url : "https://api.3tentos.com.br/hml/mvteste/v1/prod",
+                 //  url : "https://pwflex.net/api/",
+                   //url : "http://localhost:8887/apiMV/",
+
+                   url : "http://localhost:3000/dados",                   
+                    
                     method : "GET",
                     async : true,
-                    crossDomain : true,
+                    crossDomain : true //,
+                 /*
                     headers : {
                         "Authorization" : "Bearer live_556e9b64bd203439b744968bf9fdc4"
                     }
+                   */ 
                 };
-
                 // chamada da API
-                $.ajax(configuracoes)
-                
-
+                $.ajax(configuracoes)                
                 //sucesso
-                .done(function(resposta){
-                    console.log(resposta);
+                /*.always(function(resposta){
+                    console.clear();
+                    console.log(resposta);                    
+                })*/
+                 .done(function(resposta){
+                    console.clear();
+                   console.log(resposta);
                     debugger
-                    classificacaoModel2.setData({"Classificacao" : resposta});
-
-                })
-                
-                
+                    classificacaoModel2.setData( {"Classificacao" : resposta} );
+                })                            
                 //caso der erro
                 .fail(function(erro){
+                    console.clear();
+                    console.log(resposta);
                     debugger
-
                 })
-                ;
+                ;                
+            },
 
-            }
+
+                        // novo método
+                        buscarDadosClassificacao: function(){
+                            //obter model para atualizar
+                            //var dadosModel2 = this.getView().getModel("ModeloDadosGerais");
+                       
+                            
+                            var classificacaoModel2 = this.getView().getModel("ModeloClassificacao");
+            
+                            const configuracoes = {
+                              //  url : "https://api.api-futebol.com.br/v1/campeonatos/10",
+                                //url : "https://api.3tentos.com.br/hml/mvteste/v1/prod",
+                             //  url : "https://pwflex.net/api/",
+                               //url : "http://localhost:8887/apiMV/",
+            
+                               url : "http://localhost:3000/dados",                   
+                                
+                                method : "GET",
+                                async : true,
+                                crossDomain : true //,
+                             /*
+                                headers : {
+                                    "Authorization" : "Bearer live_556e9b64bd203439b744968bf9fdc4"
+                                }
+                               */ 
+                            };
+                            // chamada da API
+                            $.ajax(configuracoes)                
+                            //sucesso
+                            /*.always(function(resposta){
+                                console.clear();
+                                console.log(resposta);                    
+                            })*/
+                             .done(function(resposta){
+                                console.clear();
+                               console.log(resposta);
+                                debugger
+                                dadosclassificacaoModel2.setData( {"Classificacao" : resposta} );
+                            })                            
+                            //caso der erro
+                            .fail(function(erro){
+                                console.clear();
+                                console.log(resposta);
+                                debugger
+                            })
+                            ;                
+                        }
 
         });
     });

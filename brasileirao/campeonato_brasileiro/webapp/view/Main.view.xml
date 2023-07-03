@@ -19,7 +19,7 @@ controllerName="campeonatobrasileiro.controller.Main"
                         
                         >
                         <!-- tabela -->
-                        <Table items="{ClassificacaoModel>/Classificacao}">
+                        <Table items="{ModeloClassificacao>/Classificacao}">
                             <!-- colunas -->
                             <columns> 
                                 <!-- Posição -->
@@ -84,27 +84,27 @@ controllerName="campeonatobrasileiro.controller.Main"
                                 <ColumnListItem >   <!-- Linha da Coluna -->
                                     <cells>
                                         <!-- 1ª Coluna Posição -->
-                                        <Text text="{ClassificacaoModel>posicao}"></Text>                                        
+                                        <Text text="{ModeloClassificacao>posicao}"></Text>                                        
                                         <!-- 2ª Coluna Escudo-->
-                                        <Image width="45%" src="{ClassificacaoModel>time/escudo}"></Image>                                        
+                                        <Image width="45%" src="{ModeloClassificacao>time/escudo}"></Image>                                        
                                         <!-- 3ª Coluna Time-->
-                                        <Text text="{ClassificacaoModel>time/nome_popular}"></Text>                                        
+                                        <Text text="{ModeloClassificacao>time/nome_popular}"></Text>                                        
                                         <!-- 4ª Coluna Pontos-->
-                                        <Text text="{ClassificacaoModel>pontos}"></Text>                                        
+                                        <Text text="{ModeloClassificacao>pontos}"></Text>                                        
                                         <!-- 5ª Coluna Jogos-->
-                                        <Text text="{ClassificacaoModel>jogos}"></Text>                                        
+                                        <Text text="{ModeloClassificacao>jogos}"></Text>                                        
                                         <!-- 6ª Coluna Vitórias-->
-                                        <Text text="{ClassificacaoModel>vitorias}"></Text>                                        
+                                        <Text text="{ModeloClassificacao>vitorias}"></Text>                                        
                                         <!-- 7ª Coluna Empates-->
-                                        <Text text="{ClassificacaoModel>empates}"></Text>                                        
+                                        <Text text="{ModeloClassificacao>empates}"></Text>                                        
                                         <!-- 8ª Coluna Derrotas-->
-                                        <Text text="{ClassificacaoModel>derrotas}"></Text>                                        
+                                        <Text text="{ModeloClassificacao>derrotas}"></Text>                                        
                                         <!-- 9ª Coluna Gols Marcados-->
-                                        <Text text="{ClassificacaoModel>gols_pro}"></Text>                                        
+                                        <Text text="{ModeloClassificacao>gols_pro}"></Text>                                        
                                         <!-- 10ª Coluna Gols Contra-->
-                                        <Text text="{ClassificacaoModel>gols_contra}"></Text>                                        
+                                        <Text text="{ModeloClassificacao>gols_contra}"></Text>                                        
                                         <!-- 11ª Coluna Saldo de Gols-->
-                                        <Text text="{ClassificacaoModel>saldo_gols}"></Text>                                        
+                                        <Text text="{ModeloClassificacao>saldo_gols}"></Text>                                        
                                     </cells>
                                 </ColumnListItem>
 
