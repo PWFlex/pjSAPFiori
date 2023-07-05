@@ -7,7 +7,7 @@ controllerName="campeonatobrasileiro.controller.Main"
                     <!-- Cabeçaclho -->      
             <ObjectHeader 
                 title="{ModeloDadosGerais>/nome_popular}"
-                number="{ModeloDadosGerais>/rodada_atual_rodada}"
+                number="{ModeloDadosGerais>/rodada_atual/rodada}"
                 numberUnit="Rodada"
             ></ObjectHeader>   
             <IconTabBar>  <!-- Barra de Abas com Ícones -->

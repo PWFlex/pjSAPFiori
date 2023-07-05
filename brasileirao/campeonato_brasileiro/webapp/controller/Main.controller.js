@@ -10,7 +10,7 @@ sap.ui.define([
         return Controller.extend("campeonatobrasileiro.controller.Main", {
             onInit: function () {
 
-                this.buscarDadosGerais();
+                
 
             /* modo offline buscando de arquivo 
                 // Criação das variáveis 
@@ -39,6 +39,9 @@ sap.ui.define([
             this.getView().setModel(dadosModel, "ModeloDadosGerais");
             this.getView().setModel(classificacaoModel, "ModeloClassificacao");
             this.getView().setModel(partidasModel, "ModeloPartidas");
+
+            this.buscarDadosGerais();
+
             },
 
             // novo método
@@ -47,21 +50,18 @@ sap.ui.define([
                 var dadosModel2 = this.getView().getModel("ModeloDadosGerais");
                              
                 const configuracoes = {
-                  //  url : "https://api.api-futebol.com.br/v1/campeonatos/10",
+                    url : "https://api.api-futebol.com.br/v1/campeonatos/10",
                     //url : "https://api.3tentos.com.br/hml/mvteste/v1/prod",
                  //  url : "https://pwflex.net/api/",
                    //url : "http://localhost:8887/apiMV/",
-
-                   url : "http://localhost:3000/dados",                   
+                   //url : "http://localhost:3000/dados",                   
                     
                     method : "GET",
                     async : true,
-                    crossDomain : true //,
-                 /*
+                    crossDomain : true ,
                     headers : {
                         "Authorization" : "Bearer live_556e9b64bd203439b744968bf9fdc4"
-                    }
-                   */ 
+                    }                   
                 };
                 // chamada da API
                 $.ajax(configuracoes)                
@@ -71,10 +71,12 @@ sap.ui.define([
                     console.log(resposta);                    
                 })*/
                  .done(function(resposta){
-                    console.clear();
-                   console.log(resposta);
+                   // console.clear();
+                 //  console.log(resposta);
                     debugger
-                    classificacaoModel2.setData( {"Classificacao" : resposta} );
+                    dadosModel2.setData(resposta);
+                    var view = this.getView();
+                    view.setModel(dadosModel2, "ModeloDadosGerais");
                 })                            
                 //caso der erro
                 .fail(function(erro){
