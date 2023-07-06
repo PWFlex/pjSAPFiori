@@ -41,6 +41,8 @@ sap.ui.define([
             this.getView().setModel(partidasModel, "ModeloPartidas");
 
             this.buscarDadosGerais();
+            this.buscarClassificacao();
+  
 
             },
 
@@ -52,7 +54,7 @@ sap.ui.define([
                 const configuracoes = {
                     url : "https://api.api-futebol.com.br/v1/campeonatos/10",
                     //url : "https://api.3tentos.com.br/hml/mvteste/v1/prod",
-                 //  url : "https://pwflex.net/api/",
+                    //url : "https://pwflex.net/api/",
                    //url : "http://localhost:8887/apiMV/",
                    //url : "http://localhost:3000/dados",                   
                     
@@ -75,9 +77,12 @@ sap.ui.define([
                  //  console.log(resposta);
                     debugger
                     dadosModel2.setData(resposta);
-                    var view = this.getView();
-                    view.setModel(dadosModel2, "ModeloDadosGerais");
-                })                            
+                    this.buscarPartidas(resposta.rodada_atual.rodada);
+                 
+                 /*   var view = this.getView();
+                    view.setModel(dadosModel2, "ModeloDadosGerais");*/
+                    //função done passa a reconhecer função pai
+                }.bind(this))                            
                 //caso der erro
                 .fail(function(erro){
                     console.clear();
@@ -87,53 +92,88 @@ sap.ui.define([
                 ;                
             },
 
-
-                        // novo método
-                        buscarDadosClassificacao: function(){
-                            //obter model para atualizar
-                            //var dadosModel2 = this.getView().getModel("ModeloDadosGerais");
-                       
-                            
-                            var classificacaoModel2 = this.getView().getModel("ModeloClassificacao");
+            // novo método
+            buscarClassificacao: function(){
+            //obter model para atualizar
+            //var dadosModel2 = this.getView().getModel("ModeloDadosGerais");
             
-                            const configuracoes = {
-                              //  url : "https://api.api-futebol.com.br/v1/campeonatos/10",
-                                //url : "https://api.3tentos.com.br/hml/mvteste/v1/prod",
-                             //  url : "https://pwflex.net/api/",
-                               //url : "http://localhost:8887/apiMV/",
+            var classificacaoModel2 = this.getView().getModel("ModeloClassificacao");
             
-                               url : "http://localhost:3000/dados",                   
-                                
-                                method : "GET",
-                                async : true,
-                                crossDomain : true //,
-                             /*
-                                headers : {
-                                    "Authorization" : "Bearer live_556e9b64bd203439b744968bf9fdc4"
-                                }
-                               */ 
-                            };
-                            // chamada da API
-                            $.ajax(configuracoes)                
-                            //sucesso
-                            /*.always(function(resposta){
-                                console.clear();
-                                console.log(resposta);                    
-                            })*/
-                             .done(function(resposta){
-                                console.clear();
-                               console.log(resposta);
-                                debugger
-                                dadosclassificacaoModel2.setData( {"Classificacao" : resposta} );
-                            })                            
-                            //caso der erro
+            const configuracoes = {
+                url : "https://api.api-futebol.com.br/v1/campeonatos/10/tabela",
+                //url : "https://api.3tentos.com.br/hml/mvteste/v1/prod",
+                //  url : "https://pwflex.net/api/",
+                //url : "http://localhost:8887/apiMV/",
+                //url : "http://localhost:3000/dados",                                                   
+                method : "GET",
+                async : true,
+                crossDomain : true ,                
+                headers : {
+                   "Authorization" : "Bearer live_556e9b64bd203439b744968bf9fdc4"
+                          }                
+            };
+            // chamada da API
+                $.ajax(configuracoes)                
+                 //sucesso
+                  /*.always(function(resposta){
+                      console.clear();
+                      console.log(resposta);                    
+                   })*/
+                    .done(function(resposta){
+                                               
+                    classificacaoModel2.setData(  {"Classificacao": resposta});
+             
+                     })                            
+                         //caso der erro
                             .fail(function(erro){
                                 console.clear();
                                 console.log(resposta);
                                 debugger
                             })
                             ;                
-                        }
+            },
+
+
+                         // novo método
+            buscarPartidas: function(rodada){
+                //obter model para atualizar
+                //var dadosModel2 = this.getView().getModel("ModeloDadosGerais");
+                
+                var partidasModel2 = this.getView().getModel("ModeloPartidas");
+                
+                const configuracoes = {
+                    url : "https://api.api-futebol.com.br/v1/campeonatos/10/rodadas/" + rodada,
+                    //url : "https://api.3tentos.com.br/hml/mvteste/v1/prod",
+                    //  url : "https://pwflex.net/api/",
+                    //url : "http://localhost:8887/apiMV/",
+                    //url : "http://localhost:3000/dados",                                                   
+                    method : "GET",
+                    async : true,
+                    crossDomain : true ,                
+                    headers : {
+                       "Authorization" : "Bearer live_556e9b64bd203439b744968bf9fdc4"
+                              }                
+                };
+                // chamada da API
+                    $.ajax(configuracoes)                
+                     //sucesso
+                      /*.always(function(resposta){
+                          console.clear();
+                          console.log(resposta);                    
+                       })*/
+                        .done(function(resposta){
+                        debugger                                   
+                        partidasModel2.setData( resposta );
+                 
+                         })                            
+                             //caso der erro
+                                .fail(function(erro){
+                                    console.clear();
+                                    console.log(erro);
+                                    debugger
+                                })
+                                ;                
+                            }
 
         });
     });
